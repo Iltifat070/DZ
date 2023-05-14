@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="DZ.js">
+
+        //(1)ЗАДАЧА №1
+
+    var i = 10; //-1
+        var array = [];
+        while (i++) {
+            array.push(function() {
+                return i + i      
+                                         
+            });
+            break
+        }
+
+        console.log([
+            array[0](), // -2 // 18
+            // array[1](), // -2 // 16
+        ])
+
+
+// ЗАДАЧА №2
+//even-or-odd
+
+function even_or_odd(n) {
+    if(n % 2 === 0) {
+      return 'Even';
+    } else {
+      return 'Odd';
+    }
+};
+
+
+
+//ЗАДАЧА № 3
+//opposite-number
+
+function opposite(number) {
+    if(number = 10){
+    return (-number);
+    }
+}
+
+
+
+//ЗАДАЧА №4
+//century-from-year
+
+function centuryFromYear(year) {
+  let centuryCount = 0;
+  while (year > 0){
+    year = year - 100;
+    centuryCount = centuryCount + 1;
+  }
+  return centuryCount;
+}
+
+
+
+//ЗАДАЧА №5
+//abbreviate-a-two-word-name
+
+function abbrevName(name){
+    const answer = [name[0]]
+    for(let i = 0; i < name.length; i++) {
+        if(name[i] === " ") {
+            answer.push(name[i + 1]);
+        }
+    }
+    return answer.map(el => el.toUpperCase()).join(".")
+}
+
+
+//ЗАДАЧА №6
+//reversed-strings
+
+function reverseString(string) {
+    let array = string.split("");
+    array.reverse()
+    return array.join("")
+}
+
+
+//ЗАДАЧА №7
+//credit-card-mask
+
+//ЗАДАЧА №8
+//remove-first-and-last-character
+
+
+//ЗАДАЧА №9
+//create-phone-number
+
+function createPhoneNumber(numbers){
+  var format = "(xxx) xxx-xxxx";
+  
+  for(var i = 0; i < numbers.length; i++)
+  {
+    format = format.replace('x', numbers[i]);
+  }
+  
+  return format;
+}
+
+
+//ЗАДАЧА №10
+//How many arguments
+
+
+function numArgs(a,b,c) { 
+  return arguments.length;
+} 
+
+//ЗАДАЧА №11
+//Leap Years
+
+function isLeapYear(year) {
+  return (year % 100 !== 0 && year % 4 === 0) || year % 400 === 0;
+}
+
+
+//ЗАДАЧА №12
+//If you can't sleep, just count sheep
+
+    var countSheep = function (num) {
+        let str = "";
+        for (let i = 1; i <= num; i++) {
+            str += `${i} sheep...`;
+        }
+        return str;
+    }
+
+ //ЗАДАЧА №13
+//String insert values
+    </script>
+</body>
+</html>
